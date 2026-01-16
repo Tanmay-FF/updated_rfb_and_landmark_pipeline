@@ -24,8 +24,8 @@ This project provides a robust solution for detecting faces, extracting facial l
     3.  **Production Style - Scale & Shift** (`productionStyle_cropping_and_alignment_with_scale_and_shift.py`)
         -   **Characteristics**: An enhanced version of the production crop for better robustness.
         -   **Parameters**: Scale `0.85`, Y-Shift `-0.085` (shifts face up).
-        -   **Alignment**: Specifically employs `cv2.estimateAffinePartial2D` to ensure a similarity transform.
-        -   **Use Case**: Best balance of tightness and geometric correctness for modern training pipelines.
+        -   **Alignment**: Specifically employs `cv2.getAffineTransform` to ensure a similarity transform.
+        -   **Use Case**: A balance of tightness and geometric correctness.
 
 ## Installation
 
