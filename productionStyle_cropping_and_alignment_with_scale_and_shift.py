@@ -155,8 +155,8 @@ def production_cropping(img, bbox, margin: int = 20):
     T[:, 1] *= imgDim2
     
     # 5. Calculate Transform with the new "shrunken" target T
-    # H = cv2.getAffineTransform(npLandmarks, T)
-    H, _ = cv2.estimateAffinePartial2D(npLandmarks, T, method=cv2.LMEDS) # COMMENTING THIS
+    H = cv2.getAffineTransform(npLandmarks, T)
+    #H, _ = cv2.estimateAffinePartial2D(npLandmarks, T, method=cv2.LMEDS) # COMMENTING THIS
     # --- CHANGED LOGIC ENDS HERE ---
 
     thumbnail = cv2.warpAffine(img, H, (imgDim1, imgDim2))
